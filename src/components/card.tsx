@@ -53,7 +53,7 @@ export const Card: React.FC<CardProps> = ({
   }, [carouselImages]);
 
   // Card description length threshold
-  const DESC_LIMIT = 125;
+  const DESC_LIMIT: number = 125;
 
   // Render action button, using correct link type
   const ActionButton = () => (
@@ -61,11 +61,9 @@ export const Card: React.FC<CardProps> = ({
       href={buttonLink}
       target={externalLink ? "_blank" : undefined}
       rel={externalLink ? "noopener noreferrer" : undefined}
-      legacyBehavior
+      className="bg-materialUI-LightOnPrimaryContainer dark:bg-materialUI-DarkPrimaryContainer text-materialUI-LightPrimaryContainer dark:text-materialUI-DarkPrimaryContainer font-semibold rounded shadow px-4 py-2 hover:bg-blue-500 hover:text-white border border-blue-500 hover:border-transparent"
     >
-      <a className="bg-materialUI-LightOnPrimaryContainer dark:bg-materialUI-DarkPrimaryContainer text-materialUI-LightPrimaryContainer dark:text-materialUI-DarkPrimaryContainer font-semibold rounded shadow px-4 py-2 hover:bg-blue-500 hover:text-white border border-blue-500 hover:border-transparent">
-        {buttonTitle}
-      </a>
+      {buttonTitle}
     </Link>
   );
 

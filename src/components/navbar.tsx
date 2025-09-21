@@ -16,11 +16,11 @@ const NAV_LINKS: NavItem[] = [
 ];
 
 const Navbar: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   return (
     <nav className="bg-materialUI-LightPrimary dark:bg-materialUI-DarkOnPrimaryContainer shadow px-6 py-4 flex items-center justify-between flex-wrap sticky top-0 z-50">
-      {/* Brand */}
+      {/* Brand / Home link */}
       <div className="flex items-center text-white mr-6">
         <Link
           href="/"
@@ -29,11 +29,11 @@ const Navbar: React.FC = () => {
           Home
         </Link>
       </div>
-      {/* Hamburger */}
+      {/* Hamburger (Mobile menu) */}
       <button
-        aria-label="Toggle menu"
+        aria-label="Toggle navigation menu"
         className="block lg:hidden bg-materialUI-LightPrimaryContainer dark:bg-materialUI-DarkPrimaryContainer flex items-center px-3 py-2 border rounded"
-        onClick={() => setIsOpen((prev) => !prev)}
+        onClick={() => setMenuOpen((open) => !open)}
       >
         <svg
           className="fill-current h-5 w-5 text-white"
@@ -43,13 +43,13 @@ const Navbar: React.FC = () => {
           <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
         </svg>
       </button>
-      {/* Menu for desktop and mobile */}
+      {/* Menu links - Responsive */}
       <div
         className={`${
-          isOpen ? "block" : "hidden"
+          menuOpen ? "block" : "hidden"
         } w-full lg:flex lg:items-center lg:w-auto`}
       >
-        <div className="flex flex-col lg:flex-row lg:ml-4">
+        <nav className="flex flex-col lg:flex-row lg:ml-4">
           {NAV_LINKS.map(({ label, href, external }) =>
             external ? (
               <a
@@ -73,7 +73,7 @@ const Navbar: React.FC = () => {
               </Link>
             )
           )}
-        </div>
+        </nav>
       </div>
     </nav>
   );
