@@ -1,1 +1,15 @@
 @import "tailwindcss";
+
+:root {
+  --color-a: rgb(191, 236, 255); /* light blue */
+  --color-b: rgb(205, 193, 255); /* light purple */
+  --color-c: rgb(255, 246, 227); /* light cream */
+  --color-d: rgb(255, 204, 234); /* light pink */
+}
+
+.dark {
+  --color-a: rgb(205, 193, 255); /* swap order or pick dark-mode variants */
+  --color-b: rgb(191, 236, 255);
+  --color-c: rgb(255, 204, 234);
+  --color-d: rgb(255, 246, 227);
+}

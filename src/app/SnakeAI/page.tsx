@@ -4,6 +4,7 @@ import React, { useEffect, useRef, useState } from "react";
 
 import { Game } from "../../utils/snakegame/game";
 import Navbar from "@/components/navbar";
+import Dropdown from "@/components/dropdown";
 
 export default function SnakeAIPage() {
   // Canvas and slider refs, strongly typed
@@ -62,23 +63,23 @@ export default function SnakeAIPage() {
       <div className="pt-4 pb-10 grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 place-items-center mt-3">
         {isGameLoaded && (
           <div className="lg:col-start-1 text-center w-56">
-            {/* <Dropdown
+            <Dropdown
               mainButtonText="Save Snake to"
               arrDropdown={["Local Storage"]}
-              class={snakeGame}
-              save={true}
-              isBird={false}
-            /> */}
+              // class={snakeGame}
+              // save={true}
+              // isBird={false}
+            />
           </div>
         )}
         <div className="lg:col-start-3 lg:col-end-6 w-56 text-center">
-          {/* <Dropdown
+          <Dropdown
             mainButtonText="Load Snake From"
             arrDropdown={["Local Storage", "Website"]}
-            class={snakeGame}
-            save={false}
-            isBird={false}
-          /> */}
+            // class={snakeGame}
+            // save={false}
+            // isBird={false}
+          />
         </div>
       </div>
 

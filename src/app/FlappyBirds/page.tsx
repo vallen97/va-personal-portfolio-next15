@@ -3,6 +3,7 @@
 import Navbar from "@/components/navbar";
 import React, { useEffect, useRef, useState } from "react";
 import { flappyGame as game } from "../../utils/flappybirdgame/flappGame";
+import Dropdown from "@/components/dropdown";
 
 /**
  * Props and state for the Flappy Birds AI game page.
@@ -35,23 +36,23 @@ function FlappyBirdsPage() {
       <div className="bg-black py-4 grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 place-items-center">
         {isGameLoaded && (
           <div className="lg:col-start-1 text-center w-56">
-            {/* <Dropdown
+            <Dropdown
               mainButtonText="Save Bird to"
               arrDropdown={["Local Storage"]}
-              class={flappyBirdGame}
-              save={true}
-              isBird={true}
-            /> */}
+              // class={flappyBirdGame}
+              // save={true}
+              // isBird={true}
+            />
           </div>
         )}
         <div className="lg:col-start-3 text-center w-56">
-          {/* <Dropdown
+          <Dropdown
             mainButtonText="Load Bird From"
             arrDropdown={["Local Storage", "Website"]}
-            class={flappyBirdGame}
-            save={false}
-            isBird={true}
-          /> */}
+            // class={flappyBirdGame}
+            // save={false}
+            // isBird={true}
+          />
         </div>
       </div>
 
