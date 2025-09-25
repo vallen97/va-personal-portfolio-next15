@@ -33,7 +33,7 @@ function FlappyBirdsPage() {
   return (
     <div>
       <Navbar />
-      <div className="bg-black py-4 grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 place-items-center">
+      <div className="pt-4 pb-10 grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 place-items-center mt-3">
         {isGameLoaded && (
           <div className="lg:col-start-1 text-center w-56">
             <Dropdown
@@ -59,7 +59,7 @@ function FlappyBirdsPage() {
       {!isGameLoaded && (
         <div className="py-4 grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1">
           <button
-            className="bg-materialUI-LightOnPrimaryContainer dark:bg-materialUI-DarkPrimaryContainer text-materialUI-LightPrimaryContainer dark:text-materialUI-DarkPrimaryContainer font-semibold py-2 px-4 rounded"
+            className="bg-materialUI-LightOnPrimaryContainer dark:bg-materialUI-DarkPrimaryContainer text-materialUI-LightPrimaryContainer dark:text-materialUI-DarkPrimaryContainer font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded"
             onClick={() => {
               if (flappyBirdGame) {
                 flappyBirdGame.start();

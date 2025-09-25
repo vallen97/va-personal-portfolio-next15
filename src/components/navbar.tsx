@@ -20,8 +20,7 @@ const Navbar: React.FC = () => {
 
   return (
     <nav className="bg-materialUI-LightPrimary dark:bg-materialUI-DarkOnPrimaryContainer shadow px-6 py-4 flex items-center justify-between flex-wrap sticky top-0 z-50">
-      {/* Brand / Home link */}
-      <div className="flex items-center text-white mr-6">
+      <div className="flex items-center text-materialUI-LightOnPrimary dark:text-materialUI-DarkOnPrimary mr-6">
         <Link
           href="/"
           className="font-semibold text-xl tracking-tight hover:font-bold hover:text-materialUI-LightOnSecondary dark:hover:text-materialUI-DarkTertiary"
@@ -29,7 +28,6 @@ const Navbar: React.FC = () => {
           Home
         </Link>
       </div>
-      {/* Hamburger (Mobile menu) */}
       <button
         aria-label="Toggle navigation menu"
         className="block lg:hidden bg-materialUI-LightPrimaryContainer dark:bg-materialUI-DarkPrimaryContainer flex items-center px-3 py-2 border rounded"
@@ -43,7 +41,6 @@ const Navbar: React.FC = () => {
           <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
         </svg>
       </button>
-      {/* Menu links - Responsive */}
       <div
         className={`${
           menuOpen ? "block" : "hidden"

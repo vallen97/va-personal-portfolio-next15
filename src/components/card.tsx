@@ -90,7 +90,7 @@ export const Card: React.FC<CardProps> = ({
                 showMore ? "Show less description" : "Show more description"
               }
             >
-              {showMore ? "Show less" : "Show more"}
+              {showMore ? "Show less..." : "Show more..."}
             </button>
           )}
         </p>

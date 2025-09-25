@@ -128,7 +128,14 @@ export default function SnakeAIPage() {
         </span>
       </div>
       {/* Speed slider */}
-      <div className="py-4 grid">
+      <div
+        className="
+      block mb-2 text-sm font-medium 
+      text-materialUI-LightPrimaryContainer bg-materialUI-LightOnPrimaryContainer
+      dark:text-materialUI-DarkOnPrimaryContainer dark:bg-materialUI-DarkPrimaryContainer
+      rounded-lg px-2 py-1
+    "
+      >
         <input
           ref={sliderSpeedRef}
           id="speed-range"
@@ -136,7 +143,12 @@ export default function SnakeAIPage() {
           min={1}
           max={10}
           value={currentSpeed}
-          className="w-full h-2 bg-black rounded-lg appearance-none cursor-pointer dark:bg-gray-900"
+          className="
+      w-full h-2 appearance-none rounded-lg cursor-pointer
+      bg-gray-300 dark:bg-gray-700
+      accent-blue-500 dark:accent-blue-400
+      focus:outline-none
+    "
           aria-label="Slider that adjusts the speed of the snakes"
           onChange={handleSpeedChange}
         />
@@ -152,7 +164,14 @@ export default function SnakeAIPage() {
         </span>
       </div>
       {/* Snake count slider */}
-      <div className="py-4 grid">
+      <div
+        className="
+      block mb-2 text-sm font-medium 
+      text-materialUI-LightPrimaryContainer bg-materialUI-LightOnPrimaryContainer
+      dark:text-materialUI-DarkOnPrimaryContainer dark:bg-materialUI-DarkPrimaryContainer
+      rounded-lg px-2 py-1
+    "
+      >
         <input
           ref={sliderSnakeCountRef}
           id="snakecount-range"
@@ -160,7 +179,12 @@ export default function SnakeAIPage() {
           min={1}
           max={100}
           value={numberOfSnakes}
-          className="w-full h-2 bg-black rounded-lg appearance-none cursor-pointer dark:bg-gray-900"
+          className="
+      w-full h-2 appearance-none rounded-lg cursor-pointer
+      bg-gray-300 dark:bg-gray-700
+      accent-blue-500 dark:accent-blue-400
+      focus:outline-none
+    "
           aria-label="Slider that adjusts the number of snakes"
           onChange={handleSnakeCountChange}
         />

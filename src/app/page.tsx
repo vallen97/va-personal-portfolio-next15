@@ -93,13 +93,3 @@ export default function HomePage() {
     </div>
   );
 }
-
-/*
-  carouselImages: number;
-  imageAlt: string;
-  cardTitle: string;
-  cardDescription: string;
-  buttonTitle: string;
-  buttonLink: string;
-  externalLink: boolean;
-*/
